@@ -476,7 +476,7 @@ textarea {
     header .button {
         width: 300px;
         padding: 10px 15px;
-        margin: 10px 0;
+        margin: 10px auto;
     }
 
     .racoonsCards {
