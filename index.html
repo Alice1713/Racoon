@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <title>Питомник енотов</title>
+    <link rel="icon" href="img/header.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="welcome">
+                <div class="welcomeWords">
+                    <h1> В гости к енотам!</h1>
+                    <p>В нашем питомнике вы можете познакомиться с енотами, узнать о них много интересной информации и
+                        зарядиться позитивным настроением и эмоциями. А также стать опекуном понравившегося питомца!</p>
+                </div>
+                <div class="welcomeImg">
+                    <img class="img" src="img/header.png" alt="RACOON">
+                </div>
+            </div>
+            <a href="#racoons" class="button">Наши еноты</a>
+            <a href="#becomeSponsor" class="button">Стать опекуном</a>
+            <a href="#reviews" class="button">Отзывы о нас</a>
+            <a href="#contacts" class="button">Контакты</a>
+        </div>
+    </header>
+
+    <section id="racoons" class="section2">
+        <div class="container">
+            <div class="racoonsTitle">
+                <h2>Наши еноты</h2>
+            </div>
+            <div class="racoonsCards">
+                <div class="racoonCard">
+                    <img class="img" src="img/1.jpg" alt="RACOON">
+                    <p><b>Джестер</b></p>
+                    <p>Любознательный и любит свободу. Но с ним легко договориться – достаточно угостить вкусняшкой,
+                        поиграть или погладить.</p>
+                </div>
+                <div class="racoonCard">
+                    <img class="img" src="img/2.jpg" alt="RACOON">
+                    <p><b>Рокки</b></p>
+                    <p>Домашняя, ласковая, игривая, миролюбивая и чистоплотная девочка. Любит играть со всеми и активно
+                        проводить время.</p>
+                </div>
+                <div class="racoonCard">
+                    <img class="img" src="img/3.jpg" alt="RACOON">
+                    <p><b>Мико</b></p>
+                    <p>Забавный и находчивый зверек. Отлично уживается рядом с другими товарищами, агрессивно и отважно
+                        даёт отпор почти любому врагу.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="becomeSponsor">
+        <div class="container">
+            <div class="becomeSponsorTitle">
+                <h2>Стать опекуном</h2>
+            </div>
+            <div class="becomeSponsorForm">
+                <form action="#" method="post" onsubmit="event.preventDefault();">
+                    <div class="form">
+                        <label for="fullName">Ваше ФИО:</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Ваше ФИО"
+                            onblur="checkFullName();" required>
+                        <span id="fullName_Check"></span>
+                    </div>
+                    <div class="form">
+                        <label for="phone">Номер телефона:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+7XXXXXXXXXX" onblur="checkPhone();"
+                            required>
+                        <span id="phone_Check"></span>
+                    </div>
+                    <div class="form">
+                        <label for="birthdate">Дата рождения:</label>
+                        <input type="date" id="birthdate" name="birthdate" onblur="checkBirthdate();" required>
+                        <span id="birthdate_Check"></span>
+                    </div>
+                    <div class="form">
+                        <label for="raccoonName">Имя подопечного енота:</label>
+                        <select id="raccoonName" name="raccoonName" onblur="checkRaccoonName();" required>
+                            <option value="" disabled selected>Выберите енота</option>
+                            <option value="1">Джестер</option>
+                            <option value="2">Рокки</option>
+                            <option value="3">Мико</option>
+                        </select>
+                        <span id="raccoonName_Check"></span>
+                    </div>
+                    <div class="form">
+                        <label for="about">Расскажите немного о себе:</label>
+                        <textarea id="about" name="about" placeholder="Почему вы хотите стать опекуном?"
+                            onblur="checkAbout();" required></textarea>
+                        <span id="about_Check"></span>
+                    </div>
+                    <div class="form">
+                        <button type="submit" onclick="validateForm()"> Отправить! </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="section2">
+        <div class="container">
+            <div class="reviewsTitle">
+                <h2>Отзывы наших посетителей</h2>
+            </div>
+            <div class="changeReview">
+                <button class="prev">&lt;</button>
+                <p>листай</p>
+                <button class="next">&gt;</button>
+            </div>
+            <div class="reviewsScreen">
+                <div class="review">
+                    <img class="comment" src="img/comment1.jpg" alt="REVIEW">
+                </div>
+                <div class="review ">
+                    <img class="comment" src="img/comment2.jpg" alt="REVIEW">
+                </div>
+                <div class="review">
+                    <img class="comment" src="img/comment3.jpg" alt="REVIEW">
+                </div>
+                <div class="review">
+                    <img class="comment" src="img/comment4.jpg" alt="REVIEW">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="feedback">
+        <div class="container">
+            <div class="feedbackTitle">
+                <h2>Оставьте свой отзыв</h2>
+            </div>
+            <div class="feedbackForm">
+                <form action="#" method="post" onsubmit="event.preventDefault();">
+                    <div class="form">
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name" name="name" placeholder="Ваше имя" onblur="checkName();" required>
+                        <span id="name_Check"></span>
+                    </div>
+                    <div class="form">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Ваш email" onblur="checkEmail();"
+                            required>
+                        <span id="email_Check"></span>
+                    </div>
+                    <div class="form">
+                        <label for="date">Дата посещения:</label>
+                        <input type="date" id="date" name="date" onblur="checkDate();" required>
+                        <span id="date_Check"></span>
+                    </div>
+                    <div class="form">
+                        <label>Ваша оценка:</label>
+                        <div class="mark">
+                            <label><input type="radio" id="rating1" name="rating" value="Плохо"> Плохо</label>
+                            <label><input type="radio" id="rating2" name="rating" value="Нормально"> Нормально</label>
+                            <label><input type="radio" id="rating3" name="rating" value="Хорошо"> Хорошо</label>
+                            <label><input type="radio" id="rating4" name="rating" value="Отлично" checked> Отлично</label>
+                        </div>
+                    </div>
+                    <div class="form">
+                        <label for="comment">Подробный комментарий:</label>
+                        <textarea id="comment" name="comment"
+                            placeholder="Расскажите о своём опыте посещения питомника!" onblur="checkComment();"
+                            required></textarea>
+                        <span id="comment_Check"></span>
+                    </div>
+                    <button type="submit" onclick="displaySubmittedData()">Оставить отзыв!</button>
+                </form>
+                <div id="submittedData" style="display: none;">
+                    <h3>Отправленные данные:</h3>
+                    <p><strong>Имя:</strong> <span id="submittedName"></span></p>
+                    <p><strong>Email:</strong> <span id="submittedEmail"></span></p>
+                    <p><strong>Дата посещения:</strong> <span id="submittedDate"></span></p>
+                    <p><strong>Оценка:</strong> <span id="submittedRating"></span></p>
+                    <p><strong>Комментарий:</strong> <span id="submittedComment"></span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section2">
+        <div class="container">
+            <div class="faqTitle">
+                <h2> Ответы на популярные вопросы:</h2>
+            </div>
+            <div class="faqs">
+                <div class="faqQuestion">
+                    <span>Как можно стать опекуном енота?</span>
+                    <button class="faqToggle">+</button>
+                </div>
+                <div class="faqAnswer">
+                    <p>Каждый человек или организация независимо от формы собственности может стать опекуном любого
+                        животного из числа обитателей питомника. Всё, что для этого требуется - любовь к природе и
+                        желание помогать.</p>
+                </div>
+                <div class="faqQuestion">
+                    <span>Сколько стоит стать опекуном енота?</span>
+                    <button class="faqToggle">+</button>
+                </div>
+                <div class="faqAnswer">
+                    <p>Условия для опекунов максимально гибкие - цена участия в программе начинается от 3000 рублей в
+                        месяц.</p>
+                </div>
+                <div class="faqQuestion">
+                    <span>Какой график работы у питомника?</span>
+                    <button class="faqToggle">+</button>
+                </div>
+                <div class="faqAnswer">
+                    <p>Время работы для обычных посетителей ежедневно 10:00-17:00, для опекунов ежедневно 9:00-18:00.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacts">
+        <div class="container">
+            <div class="contact animate__animated animate__zoomInLeft">
+                <p>Наши контакты:<br>
+                    +79123456789 - Владелец питомника<br>
+                    +79876543210 - Администратор питомника<br>
+                    RacoonZoo@email.com</p>
+            </div>
+            <div class="contactTime animate__animated animate__zoomInRight">
+                <p>Время работы ежедневно 10:00-17:00<br>
+                    Лучшее время для экскурсий: 10:00-11:00 и 16:00-17:00<br>
+                    (В утреннее и вечернее время животные наиболее активные)<br>
+                    Начало экскурсий через каждые 90 минут</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js">
+
+    </script>
+
+</body>
+
+</html>

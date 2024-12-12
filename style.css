@@ -1,0 +1,589 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    color: #400101;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+div,
+p,
+input,
+button,
+form,
+span,
+a {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.section2 {
+    background-color: rgba(64, 1, 1, 0.1);
+    border: solid 1px rgba(64, 1, 1, 0.2);
+
+}
+
+footer {
+    text-align: center;
+    background-color: rgba(64, 1, 1, 0.9);
+    color: #e2e2e2;
+}
+
+header {
+    padding: 20px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: row;
+}
+
+.welcomeImg {
+    flex-shrink: 0;
+    text-align: right;
+    margin-left: auto;
+}
+
+@keyframes rotateRaccoon {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.welcomeImg img {
+    animation: none;
+}
+
+.welcomeWords {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-right: 20px;
+}
+
+header h1 {
+    margin: 0 0 50px 10px;
+}
+
+header p {
+    margin: 0 0 50px 10px;
+    font-size: larger;
+    color: rgba(64, 1, 1, 0.8);
+    max-width: 600px;
+    text-align: left;
+}
+
+header .img {
+    width: 300px;
+    height: auto;
+}
+
+header .button {
+    display: inline-block;
+    width: 220px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #400101;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+header .button:hover {
+    background-color: #180000;
+}
+
+
+.racoonsTitle h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.racoonsCards {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.racoonCard {
+    padding: 10px;
+    width: 20%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.racoonCard:hover {
+    transform: translateY(-5px);
+}
+
+.racoonCard img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.racoonCard p {
+    line-height: 1.5;
+    max-width: 100%;
+    color: rgba(64, 1, 1, 0.8);
+    text-align: left;
+}
+
+.racoonCard p b {
+    display: block;
+    margin-bottom: 5px;
+    color: rgba(64, 1, 1);
+}
+.form span {
+    margin-left: 5px;
+}
+.becomeSponsorForm {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.becomeSponsorTitle {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.becomeSponsorForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.becomeSponsorForm label {
+    margin-bottom: 5px;
+    flex-basis: 150px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    text-align: left;
+}
+
+.becomeSponsorForm input[type="date"],
+.becomeSponsorForm select {
+    color: #400101;
+    background-color: rgba(64, 1, 1, 0.6);
+    flex-grow: 1;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.becomeSponsorForm select option {
+    color: #400101;
+}
+
+.becomeSponsorForm input[type="text"],
+.becomeSponsorForm input[type="date"]:valid,
+.becomeSponsorForm input[type="tel"],
+.becomeSponsorForm select:valid,
+.becomeSponsorForm textarea {
+    flex-grow: 1;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(64, 1, 1, 0.6);
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    min-height: 100px;
+    overflow-y: auto;
+}
+
+.becomeSponsorForm input::placeholder,
+.becomeSponsorForm textarea::placeholder {
+    color: #400101;
+    opacity: 1;
+}
+
+.becomeSponsorForm button {
+    padding: 10px 20px;
+    margin: 0 auto;
+    width: 150px;
+    height: auto;
+    border: none;
+    border-radius: 5px;
+    background: #350101;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.becomeSponsorForm button:hover {
+    background: #ffffff;
+    color: #350101;
+    border: 1px solid #350101;
+    border-radius: 5px;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.changeReview {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.prev,
+.next {
+    background: none;
+    border: none;
+    color: rgba(64, 1, 1, 0.7);
+    width: 50px;
+    font-size: 30px;
+}
+
+.changeReview p {
+    color: rgba(64, 1, 1, 0.8);
+    font-size: larger;
+}
+
+.review {
+    display: block;
+    max-height: 410px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+
+}
+
+.active-review {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+
+}
+
+.comment {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.feedbackForm {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.feedbackForm h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.feedbackForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedbackForm label {
+    margin-bottom: 5px;
+    flex-basis: 150px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    text-align: left;
+}
+
+.feedbackForm input[type="date"],
+.feedbackForm select {
+    color: #400101;
+    background-color: rgba(64, 1, 1, 0.6);
+    flex-grow: 1;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.feedbackForm select option {
+    color: #400101;
+}
+
+.feedbackForm input[type="text"],
+.feedbackForm input[type="email"],
+.feedbackForm input[type="radio"],
+.feedbackForm input[type="date"]:valid,
+.feedbackForm select:valid,
+.feedbackForm textarea {
+    flex-grow: 1;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(64, 1, 1, 0.6);
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.feedbackForm input::placeholder,
+.feedbackForm textarea::placeholder {
+    color: #400101;
+    opacity: 1;
+}
+
+input[type="radio"] {
+    accent-color: #400101;
+
+}
+
+.feedbackForm button {
+    padding: 10px 20px;
+    margin: 0 auto;
+    width: 150px;
+    height: auto;
+    border: none;
+    border-radius: 5px;
+    background: #350101;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.feedbackForm button:hover {
+    background: #ffffff;
+    color: #350101;
+    border: 1px solid #350101;
+    border-radius: 5px;
+}
+
+#faq .container {
+    width: 50%;
+    margin: auto;
+}
+
+.faqTitle {
+    margin-bottom: 50px;
+}
+
+.faqQuestion {
+    background-color: none;
+    border-top: 1px solid #400101;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faqQuestion span {
+    color: #400101;
+    font-size: 26px;
+}
+
+.faqToggle {
+    background: none;
+    border: none;
+    color: #400101;
+    font-size: 50px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.faqAnswer {
+    display: none;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    text-align: left;
+    color: rgba(64, 1, 1, 0.9)
+}
+
+.faqAnswer.active {
+    display: block;
+}
+
+#contacts .container {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 15px;
+    }
+
+    header .button {
+        width: 200px;
+        padding: 10px 15px;
+        margin: 10px 5px;
+    }
+
+    .racoonCard {
+        width: 80%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    #contacts .container {
+        width: 70%;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    .welcomeWords,
+    .welcomeImg {
+        margin: 0 auto;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .racoonCard {
+        max-width: 300px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    #faq .container {
+        width: 70%;
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .welcome {
+        flex-direction: column;
+    }
+
+    header h1 {
+        margin: 0 auto;
+        font-size: 20px;
+    }
+
+    header p {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    header .button {
+        width: 300px;
+        margin: 10px auto;
+    }
+
+    .racoonsCards {
+        flex-direction: column;
+    }
+
+    .racoonCard {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .racoonCard p {
+        text-align: center;
+    }
+
+    .becomeSponsorForm,
+    .feedbackForm {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .becomeSponsorForm label,
+    .feedbackForm label {
+        flex-basis: auto;
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .becomeSponsorForm input,
+    .becomeSponsorForm select,
+    .becomeSponsorForm textarea,
+    .feedbackForm input[type="text"],
+    .feedbackForm input[type="email"],
+    .feedbackForm input[type="date"],
+    .feedbackForm select,
+    .feedbackForm textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .mark {
+        flex-basis: auto;
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .mark label {
+        margin: 5px;
+        white-space: nowrap;
+    }
+
+    .becomeSponsorForm button,
+    .feedbackForm button {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .faq .container {
+        width: 100%;
+    }
+
+    #contacts .container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contact,
+    .contactTime {
+        width: 100%;
+        text-align: center;
+    }
+
+
+}
